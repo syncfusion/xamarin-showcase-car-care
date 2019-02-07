@@ -13,8 +13,8 @@ This project uses the following patterns and features:
 * Xamarin.Essentials
 * Localization
 * Styles
-* AutoFac for dependency injection
-* Sqlite
+* Dependency injection
+* Sqlite - database connection
 * Phone, tablet, and desktop layouts
 
 ## Syncfusion controls
@@ -29,6 +29,7 @@ This project uses the following Syncfusion controls:
 * [SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/dataform)
 * [SfListView](https://www.syncfusion.com/xamarin-ui-controls/listview)
 * [SfRotator](https://www.syncfusion.com/xamarin-ui-controls/rotator)
+* [SfButtons](https://www.syncfusion.com/xamarin-ui-controls/button)
 
 ## Key features
 
@@ -41,19 +42,11 @@ This project uses the following Syncfusion controls:
 
 ### Android
 
-<img src="Images/Android/login.jpg" Width="210" />
-<img src="Images/Android/carlist.jpg" Width="210" />
-<img src="Images/Android/newbooking.jpg" Width="210" />
-<img src="Images/Android/cardetails.jpg" Width="210" />
-<img src="Images/Android/logwork.jpg" Width="210" />
+<img src="Images/Android/login.jpg" Width="210" /> <img src="Images/Android/carlist.jpg" Width="210" /> <img src="Images/Android/newbooking.jpg" Width="210" /> <img src="Images/Android/cardetails.jpg" Width="210" /> <img src="Images/Android/logwork.jpg" Width="210" />
 
 ### iOS
 
-<img src="Images/iOS/login.png" Width="210" />
-<img src="Images/iOS/carlist.png" Width="210" />
-<img src="Images/iOS/newbooking.png" Width="210" />
-<img src="Images/iOS/cardetails.png" Width="210" />
-<img src="Images/iOS/logwork.png" Width="210" />
+<img src="Images/iOS/login.png" Width="210" /> <img src="Images/iOS/carlist.png" Width="210" /> <img src="Images/iOS/newbooking.png" Width="210" /> <img src="Images/iOS/cardetails.png" Width="210" /> <img src="Images/iOS/logwork.png" Width="210" />
 
 ## Supported platforms
 
