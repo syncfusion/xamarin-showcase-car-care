@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.AddTimeLogPage" xmlns:local="clr-namespace:CarCare" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms" Title="Log Work" ios:Page.UseSafeArea="true"
+             xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" >
+    <ContentPage.Content>
+        <FlexLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Direction="Column">
+            <Label FlexLayout.Basis="10%" Text="Log Work" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,10" />
+            <dataForm:SfDataForm x:Name="DataForm" FlexLayout.Grow="1" DataObject="{Binding TimeLog}" LabelPosition="Top" Margin="5">
+                <dataForm:SfDataForm.Behaviors>
+                    <local:DataFormBehavior Command="{Binding DataFormItemGeneratedCommand}" />
+                </dataForm:SfDataForm.Behaviors>
+            </dataForm:SfDataForm>
+            <sfButton:SfButton FlexLayout.Basis="40" FlexLayout.AlignSelf="Stretch" Text="ADD TIMELOG" FontAttributes="Bold" FontSize="14" CornerRadius="0" BackgroundColor="{StaticResource BluishGreenColor}" TextColor="{StaticResource WhiteGreenColor}" Command="{Binding AddTimeLogCommand}" />
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

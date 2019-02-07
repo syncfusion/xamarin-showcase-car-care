@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.App" xmlns:local="clr-namespace:CarCare;assembly=CarCare">
+    <Application.Resources>
+        <local:StringToBackgroundColorConverter x:Key="StringToBackgroundColorConverter" />
+        <local:StringToTextColorConverter x:Key="StringToTextColorConverter" />
+        <local:ObjectToImageSourceConverter x:Key="ObjectToImageSourceConverter" />
+        <Color x:Key="BlackColor">#343434</Color>
+        <Color x:Key="BlueColor">#0052CC</Color>
+        <Color x:Key="GrayColor">#888888</Color>
+        <Color x:Key="YellowColor">#E8C313</Color>
+        <Color x:Key="GreenColor">#156384</Color>
+        <Color x:Key="LeafGreenColor">#029239</Color>
+        <Color x:Key="WhiteGreenColor">#D7F6FF</Color>
+        <Color x:Key="BluishGreenColor">#03394F</Color>
+        <Color x:Key="LightBlackColor">#FFFFFF</Color>
+        <Color x:Key="LightGrayColor">#CDCDCD</Color>
+        <Color x:Key="OrangeYellowColor">#BC8315</Color>
+        <Color x:Key="HintTextColor">#686868</Color>
+    </Application.Resources>
+</Application>

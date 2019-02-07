@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" x:Class="CarCare.ProjectPage" Title="Car Care" xmlns:local="clr-namespace:CarCare;assembly=CarCare" xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms" x:Name="ProjectsListPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="AddIcon.png" Command="{Binding AddProjectCommand}">
+            <ToolbarItem.Text>
+                <OnPlatform x:TypeArguments="x:String" WinPhone="Add project" />
+            </ToolbarItem.Text>
+        </ToolbarItem>
+        <ToolbarItem Icon="LogoutIcon.png" Command="{Binding LogoutCommand}" CommandParameter="{Binding Source={x:Reference ProjectsListPage}}">
+            <ToolbarItem.Text>
+                <OnPlatform x:TypeArguments="x:String" WinPhone="Logout" />
+            </ToolbarItem.Text>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <busyindicator:SfBusyIndicator x:Name="busyindicator" BackgroundColor="{StaticResource BluishGreenColor}" TextColor="{StaticResource WhiteGreenColor}" IsBusy="{Binding IsBusy}" IsVisible="{Binding IsBusy}" AnimationType="SlicedCircle" Title="Fetching project details..." />
+            <listView:SfListView x:Name="ProjectList" ItemsSource="{Binding Projects}" ItemSize="100" Margin="0,7,0,0" ItemSpacing="7,0,7,7" SelectionBackgroundColor="Transparent" TapCommand="{Binding Path=BindingContext.ProjectItemTappedCommand, Source={x:Reference ProjectList}}">
+                <listView:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:ProjectDetailViewCell />
+                    </DataTemplate>
+                </listView:SfListView.ItemTemplate>
+            </listView:SfListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

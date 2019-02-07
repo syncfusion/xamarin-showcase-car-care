@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.NewBookingPage" xmlns:local="clr-namespace:CarCare;" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:sync="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms" xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable" Title="New Booking" ios:Page.UseSafeArea="true"
+             xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="CameraIcon.png" Command="{Binding TakePhotoCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="0,10,0,0">
+            <sync:SfDataForm x:Name="DataForm" FlexLayout.Basis="55%" Margin="0" DataObject="{Binding Project}" LabelPosition="Top" ValidationMode="LostFocus">
+                <sync:SfDataForm.Behaviors>
+                    <local:DataFormBehavior Command="{Binding DataFormItemGeneratedCommand}" />
+                </sync:SfDataForm.Behaviors>
+            </sync:SfDataForm>
+            <StackLayout FlexLayout.Basis="45%">
+                <Label VerticalOptions="Start" HeightRequest="50" Margin="20,0" Text="Photos" TextColor="{StaticResource BlackColor}" />
+                <listView:SfListView x:Name="CarPhotos" VerticalOptions="CenterAndExpand" Margin="20,0" ItemsSource="{Binding CarPhotos}" ItemSize="100" Orientation="Horizontal" ItemSpacing="10,10,0,0">
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Image Source="{Binding CarPhotoPath}" HeightRequest="150" WidthRequest="150" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </listView:SfListView.ItemTemplate>
+                </listView:SfListView>
+                <sfButton:SfButton Text="NEW BOOKING" VerticalOptions="End" Margin="0" HeightRequest="50" FontSize="14" CornerRadius="0" BackgroundColor="{StaticResource BluishGreenColor}" TextColor="{StaticResource WhiteGreenColor}" Command="{Binding NewBookingCommand}" />
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.ProjectDetailViewCell">
+    <ViewCell.View>
+        <Frame Margin="1,0,1,1" Padding="0" HasShadow="true" OutlineColor="#DADADA" CornerRadius="5">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.75*" />
+                </Grid.ColumnDefinitions>
+                <Image x:Name="CarImage" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="4" Source="{Binding CarPhotos,Converter={StaticResource ObjectToImageSourceConverter}}" Aspect="Fill" />
+                <Grid Grid.Column="1">
+                    <StackLayout Grid.Row="0" Orientation="Horizontal">
+                        <Label Text="{Binding CustomerName}" TextColor="{StaticResource BlackColor}" FontSize="15" />
+                        <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="120" BackgroundColor="{Binding ServiceStatus,Converter={StaticResource StringToBackgroundColorConverter}}">
+                            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Text="{Binding ServiceStatus}" FontSize="12" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{Binding ServiceStatus,Converter={StaticResource StringToTextColorConverter}}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <Label Grid.Row="1" Text="{Binding ProjectID,StringFormat='Car ID : {0}'}" TextColor="{StaticResource GrayColor}" FontSize="15" />
+                    <Label Grid.Row="2" Text="{Binding CarMake,StringFormat='Make : {0}'}" TextColor="{StaticResource GrayColor}" FontSize="13" />
+                    <StackLayout Grid.Row="3" Orientation="Horizontal">
+                        <Label Text="{Binding BookedDate,StringFormat='Booked : \{0:dd/MMM/yy}'}" TextColor="{StaticResource GrayColor}" FontSize="12" />
+                        <Label Margin="0,0,6,0" Text="{Binding DueDate,StringFormat='Due : \{0:dd/MMM/yy}'}" TextColor="{StaticResource GreenColor}" FontAttributes="Bold" HorizontalOptions="EndAndExpand" FontSize="12" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

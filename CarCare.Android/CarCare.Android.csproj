@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{FB4D6EFE-E3AD-4F6F-AD61-2D5F1729DA23}</ProjectGuid>
+        <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <RootNamespace>CarCare.Droid</RootNamespace>
+        <AssemblyName>CarCare.Android</AssemblyName>
+        <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+        <AndroidApplication>True</AndroidApplication>
+        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+        <AndroidResgenClass>Resource</AndroidResgenClass>
+        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+        <NuGetPackageImportStamp>
+        </NuGetPackageImportStamp>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidManagedSymbols>true</AndroidManagedSymbols>
+        <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
+        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
+        <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2" />
+        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
+        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
+        <PackageReference Include="Syncfusion.Xamarin.Core">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="sqlite-net-pcl">
+            <Version>1.5.231</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfTabView">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfListView">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms">
+            <Version>3.4.0.1029999</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfDataForm">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.Buttons">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfRotator">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Plugin.CurrentActivity">
+            <Version>2.1.0.4</Version>
+        </PackageReference>
+        <PackageReference Include="Plugin.Permissions">
+            <Version>3.0.0.12</Version>
+        </PackageReference>
+        <PackageReference Include="Xam.Plugin.Media">
+            <Version>4.0.1.5</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Essentials">
+            <Version>0.9.1-preview</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
+            <Version>16.4.0.52</Version>
+        </PackageReference>
+        <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="16.4.0.52" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="DependencyServices\ToastAndroid.cs" />
+        <Compile Include="SplashScreenActivity.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable\icon.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+        <AndroidResource Include="Resources\raw\CarCareDB.db3" />
+        <AndroidResource Include="Resources\drawable\Delete.png" />
+        <AndroidResource Include="Resources\drawable\Edit.png" />
+        <AndroidResource Include="Resources\drawable\Car1.jpg" />
+        <AndroidResource Include="Resources\drawable\Car2.jpg" />
+        <AndroidResource Include="Resources\drawable\Car3.jpg" />
+        <AndroidResource Include="Resources\drawable\Car4.jpg" />
+        <AndroidResource Include="Resources\drawable\Car5.jpg" />
+        <AndroidResource Include="Resources\drawable\AddIcon.png" />
+        <AndroidResource Include="Resources\drawable\CameraIcon.png" />
+        <AndroidResource Include="Resources\drawable\DateIcon.png" />
+        <AndroidResource Include="Resources\drawable\DownArrowIcon.png" />
+        <AndroidResource Include="Resources\xml\file_paths.xml" />
+        <AndroidResource Include="Resources\drawable\SplashScreen.png" />
+        <AndroidResource Include="Resources\values\splash.xml" />
+        <AndroidResource Include="Resources\drawable\LogoutIcon.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\AddIcon.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\CameraIcon.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\LogoutIcon.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\AddIcon.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\CameraIcon.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\LogoutIcon.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\AddIcon.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\CameraIcon.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\LogoutIcon.png" />
+        <AndroidResource Include="Resources\drawable\Car2Tablet.jpg" />
+        <AndroidResource Include="Resources\drawable\Car3Tablet.jpg" />
+        <AndroidResource Include="Resources\drawable\Car1Tablet.jpg" />
+        <AndroidResource Include="Resources\drawable\Car4Tablet.jpg" />
+        <AndroidResource Include="Resources\drawable\Car5Tablet.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Properties\AndroidManifest.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\layout\Tabbar.axml" />
+        <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\values\styles.xml">
+            <SubType>Designer</SubType>
+        </AndroidResource>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\CarCare\CarCare.csproj">
+            <Project>{2D8FA1C8-2CF8-49D1-A200-592F9EAF242B}</Project>
+            <Name>CarCare</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\xml\" />
+        <Folder Include="DependencyServices\" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+    <Import Project="..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />
+</Project>

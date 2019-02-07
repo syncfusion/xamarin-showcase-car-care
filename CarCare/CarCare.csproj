@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+		<PackageReference Include="Syncfusion.Xamarin.Core" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="16.4.0.52" />
+		<PackageReference Include="SQLiteNetExtensions.Async" Version="2.1.0" />
+		<PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
+		<PackageReference Include="Xamarin.Forms" Version="3.4.0.1029999" />
+		<PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.4.0.52" />
+        <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="16.4.0.52" />
+		<PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="16.4.0.52" />
+		<PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+			<DependentUpon>*.xaml</DependentUpon>
+		</Compile>
+	</ItemGroup>
+<!--	<Import Project="..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets" Condition="Exists('..\build\tools\Syncfusion.CodeAnalysis.StyleCop\tools\StyleCop.MsBuild.targets')" />-->
+	<ItemGroup>
+	  <Folder Include="Enums\" />
+	  <Folder Include="View\ViewCells\" />
+	  <Folder Include="Behaviors\" />
+	  <Folder Include="Styles\" />
+	  <Folder Include="DependencyServices\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="App.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ContentPages\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ContentPages\Operations\AddTimeLogPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ContentPages\Operations\NewBookingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ContentPages\ProjectDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ContentPages\ProjectPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	  <None Update="View\ViewCells\ProjectDetailViewCell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
+</Project>

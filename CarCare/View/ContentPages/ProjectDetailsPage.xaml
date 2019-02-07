@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:listCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib" x:Class="CarCare.ProjectDetailsPage" xmlns:local="clr-namespace:CarCare" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" Title="Details View"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Icon="AddIcon.png" Command="{Binding AddPartsCommand}" CommandParameter="{x:Reference DataGrid}">
+            <ToolbarItem.Text>
+                <OnPlatform x:TypeArguments="x:String" WinPhone="Add timelog" />
+            </ToolbarItem.Text>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView Margin="0" Padding="0">
+            <Grid RowSpacing="5" ColumnSpacing="0" Margin="0" Padding="0">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="13" />
+                        <Setter Property="TextColor" Value="#313131" />
+                        <Setter Property="VerticalTextAlignment" Value="Center" />
+                        <Setter Property="HorizontalTextAlignment" Value="Start" />
+                    </Style>
+                    <FontAttributes x:Key="Bold">Bold</FontAttributes>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <rotator:SfRotator x:Name="rotator" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0" BackgroundColor="#ececec" ItemsSource="{Binding Project.CarPhotos}" NavigationDirection="Horizontal" NavigationStripMode="Dots" NavigationStripPosition="Bottom" EnableLooping="false">
+                    <rotator:SfRotator.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding CarPhotoPath}" Aspect="AspectFit" Margin="0" />
+                        </DataTemplate>
+                    </rotator:SfRotator.ItemTemplate>
+                </rotator:SfRotator>
+                <Grid Grid.Row="1" RowSpacing="2" ColumnSpacing="0" Margin="8,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.ColumnSpan="3" HorizontalOptions="StartAndExpand" Text="{Binding Project.CustomerName}" FontSize="16" TextColor="{StaticResource BlackColor}" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="1" Text="Car ID" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="2" Text="Make" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="3" Text="Booked" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="4" Text="Due" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="5" Text="Delivered" FontAttributes="{StaticResource Bold}" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Project.ProjectID,StringFormat='  :  {0}'}" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Project.CarMake,StringFormat='  :  {0}'}" />
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding Project.BookedDate,StringFormat='  :  {0:dd/MM/yyyy}'}" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding Project.DueDate,StringFormat='  :  {0:dd/MM/yyyy}'}" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="{Binding ProjectDeliveredDate,StringFormat='  :  {0:dd/MM/yyyy}'}" />
+                    <StackLayout Grid.Row="6" Grid.ColumnSpan="3" Padding="0" Margin="0">
+                        <BoxView HeightRequest="1" Color="{StaticResource LightGrayColor}" VerticalOptions="CenterAndExpand" Margin="0" />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.ColumnSpan="2" Margin="8,0" Text="SERVICE DETAILS" FontAttributes="{StaticResource Bold}" FontSize="15" HorizontalOptions="Center" />
+                    <Label Grid.Row="1" Grid.ColumnSpan="2" Margin="8,0" Text="{Binding Project.TypeOfService,StringFormat='Type of service : {0}'}" FontAttributes="{StaticResource Bold}" />
+                    <StackLayout Grid.Row="2" Grid.ColumnSpan="2" Margin="8,0" Orientation="Horizontal">
+                        <Label Text="Service status   :" FontAttributes="{StaticResource Bold}" />
+                        <combobox:SfComboBox HorizontalOptions="StartAndExpand" Margin="0" DataSource="{Binding ProjectStatusList}" MaximumDropDownHeight="300" TextSize="12" DropDownTextSize="12" SelectedItem="{Binding Project.ServiceStatus}" VerticalOptions="FillAndExpand" WidthRequest="200">
+                            <combobox:SfComboBox.Behaviors>
+                                <local:ComboboxBehavior Command="{Binding ComboboxSelectionCommand}" />
+                            </combobox:SfComboBox.Behaviors>
+                        </combobox:SfComboBox>
+                    </StackLayout>
+                    <Label x:Name="TimeLogLabel" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="8,0" Text="No records found" />
+                    <datagrid:SfDataGrid x:Name="DataGrid" Grid.Row="3" Grid.ColumnSpan="2" AutoGenerateColumns="false" LiveDataUpdateMode="AllowSummaryUpdate" ItemsSource="{Binding TimeLogs}" ColumnSizer="Star">
+                        <datagrid:SfDataGrid.Resources>
+                            <ResourceDictionary>
+                                <x:Double x:Key="TextSize">14</x:Double>
+                            </ResourceDictionary>
+                        </datagrid:SfDataGrid.Resources>
+                        <datagrid:SfDataGrid.GridStyle>
+                            <local:CustomGridStyle />
+                        </datagrid:SfDataGrid.GridStyle>
+                        <datagrid:SfDataGrid.Behaviors>
+                            <local:DataGridBehavior Command="{Binding GridLoadedCommand}" />
+                        </datagrid:SfDataGrid.Behaviors>
+                        <datagrid:SfDataGrid.Columns x:TypeArguments="dataGrid:Columns">
+                            <datagrid:GridTextColumn MappingName="PartName" HeaderText="Part" HeaderFontAttribute="Bold" HeaderTextAlignment="Center" TextAlignment="Start" HeaderCellTextSize="{StaticResource TextSize}" CellTextSize="{StaticResource TextSize}" />
+                            <datagrid:GridTextColumn MappingName="UserName" HeaderText="Name" HeaderFontAttribute="Bold" HeaderCellTextSize="{StaticResource TextSize}" CellTextSize="{StaticResource TextSize}" />
+                            <datagrid:GridTextColumn MappingName="LoggedDate" Format="dd/MMM" HeaderText="Date" HeaderFontAttribute="Bold" HeaderCellTextSize="{StaticResource TextSize}" CellTextSize="{StaticResource TextSize}" />
+                            <datagrid:GridTextColumn x:Name="TimeLogColumn" MappingName="Hours" HeaderText="Hours" HeaderFontAttribute="Bold" HeaderTextAlignment="Center" TextAlignment="Center" HeaderCellTextSize="{StaticResource TextSize}" CellTextSize="{StaticResource TextSize}" LoadUIView="true" />
+                            <datagrid:GridTextColumn MappingName="Price" HeaderText="Price" HeaderFontAttribute="Bold" HeaderTextAlignment="Center" Format="C" TextAlignment="Center" HeaderCellTextSize="{StaticResource TextSize}" CellTextSize="{StaticResource TextSize}" LoadUIView="true" ColumnSizer="LastColumnFill" />
+                        </datagrid:SfDataGrid.Columns>
+                        <datagrid:SfDataGrid.TableSummaryRows>
+                            <datagrid:GridTableSummaryRow Name="TableSummary" ShowSummaryInRow="False">
+                                <datagrid:GridTableSummaryRow.SummaryColumns>
+                                    <datagrid:GridSummaryColumn Name="Hours" Format="{}" MappingName="Hours" />
+                                    <datagrid:GridSummaryColumn Name="Price" Format="{}{Sum:C}" MappingName="Price" SummaryType="DoubleAggregate" />
+                                </datagrid:GridTableSummaryRow.SummaryColumns>
+                            </datagrid:GridTableSummaryRow>
+                        </datagrid:SfDataGrid.TableSummaryRows>
+                    </datagrid:SfDataGrid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
