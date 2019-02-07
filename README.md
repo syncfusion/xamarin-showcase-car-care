@@ -41,19 +41,19 @@ This project uses the following Syncfusion controls:
 
 ### Android
 
-<img src="images/Android/login.jpg" Width="210" />
-<img src="images/Android/carlist.jpg" Width="210" />
-<img src="images/Android/newbooking.jpg" Width="210" />
-<img src="images/Android/cardetails.jpg" Width="210" />
-<img src="images/Android/logwork.jpg" Width="210" />
+<img src="Images/Android/login.jpg" Width="210" />
+<img src="Images/Android/carlist.jpg" Width="210" />
+<img src="Images/Android/newbooking.jpg" Width="210" />
+<img src="Images/Android/cardetails.jpg" Width="210" />
+<img src="Images/Android/logwork.jpg" Width="210" />
 
 ### iOS
 
-<img src="images/iOS/login.png" Width="210" />
-<img src="images/iOS/carlist.png" Width="210" />
-<img src="images/iOS/newbooking.png" Width="210" />
-<img src="images/iOS/cardetails.png" Width="210" />
-<img src="images/iOS/logwork.png" Width="210" />
+<img src="Images/iOS/login.png" Width="210" />
+<img src="Images/iOS/carlist.png" Width="210" />
+<img src="Images/iOS/newbooking.png" Width="210" />
+<img src="Images/iOS/cardetails.png" Width="210" />
+<img src="Images/iOS/logwork.png" Width="210" />
 
 ## Supported platforms
 
