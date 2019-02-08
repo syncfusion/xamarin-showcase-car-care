@@ -1,6 +1,6 @@
 # Car Care
 
-Car care is an application developed using Xamarin.Forms and Syncfusion controls for the usages in car service centers. The users of the service center can add a new car details, capture the photos of damaged parts, and add work log for their work.
+Car care is an application developed using Xamarin.Forms and Syncfusion controls for the usages in car service companies. The users can add a new car details, capture the photos of damaged parts, and add work log for their work.
 
 This project uses the following patterns and features:
 
@@ -15,7 +15,7 @@ This project uses the following patterns and features:
 * Styles
 * Dependency injection
 * Sqlite - database connection
-* Phone, tablet, and desktop layouts
+* Phone and tablet layouts
 
 ## Syncfusion controls
 
@@ -29,13 +29,13 @@ This project uses the following Syncfusion controls:
 * [SfDataForm](https://www.syncfusion.com/xamarin-ui-controls/dataform)
 * [SfListView](https://www.syncfusion.com/xamarin-ui-controls/listview)
 * [SfRotator](https://www.syncfusion.com/xamarin-ui-controls/rotator)
-* [SfButtons](https://www.syncfusion.com/xamarin-ui-controls/button)
+* [SfButton](https://www.syncfusion.com/xamarin-ui-controls/button)
 
 ## Key features
 
 * Provides overview of the cars available for service.
 * Provides details of the individual cars with current service status and due date.
-* Captrues images of the damaged parts of the cars when giving to service.
+* Captures images of the damaged parts of the cars when giving to service.
 * Logs the work with parts used for the service.
 
 ## Screens
@@ -55,7 +55,8 @@ This project uses the following Syncfusion controls:
 | Android   | API level 21 and later versions |
 | iOS | iOS 9.0 and later versions |
 
-Refer to the following link for more details: [System Requirements](https://help.syncfusion.com/xamarin/installation-and-upgrade/system-requirements)
+Refer to the following link for more details: 
+[System Requirements](https://help.syncfusion.com/xamarin/installation-and-upgrade/system-requirements)
 
 ## Licenses
 
@@ -68,9 +69,9 @@ This application uses the following third party assemblies.
 
 ## Inputs
 
-Please enter the following logon credentials to access the functionalities of an application.
+Please enter the following credentials to access the functionalities of this application.
 
-* UserName :- demo
+* Username :- demo
 * Password :- demo
 
 ## Requirements to run demo
@@ -98,9 +99,9 @@ Please enter the following logon credentials to access the functionalities of an
 
 Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key#xamarinforms) for more details.
 
-3.Set any one of the platform specific projects (iOS, Android) as a start-up project.
-4.Clean and build the application.
-5.Run the application.
+3. Set any one of the platform specific projects (iOS, Android) as a start-up project.
+4. Clean and build the application.
+5. Run the application.
 
 ## License
 
