@@ -74,7 +74,7 @@ Please enter the following credentials to access the functionalities of this app
 * Username :- demo
 * Password :- demo
 
-## Requirements to run demo
+## Requirements to run the sample
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 * Xamarin add-ons for Visual Studio (available in Visual Studio installer)
