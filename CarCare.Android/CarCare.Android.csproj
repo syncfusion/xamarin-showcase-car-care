@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,37 +45,20 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
-        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
         <PackageReference Include="Syncfusion.Xamarin.Core">
-            <Version>16.4.0.52</Version>
+            <Version>17.4.0.47</Version>
         </PackageReference>
         <PackageReference Include="sqlite-net-pcl">
-            <Version>1.5.231</Version>
+            <Version>1.6.292</Version>
         </PackageReference>
         <PackageReference Include="Syncfusion.Xamarin.SfTabView">
-            <Version>16.4.0.52</Version>
+            <Version>17.2.0.51</Version>
         </PackageReference>
         <PackageReference Include="Syncfusion.Xamarin.SfListView">
-            <Version>16.4.0.52</Version>
-        </PackageReference>
-        <PackageReference Include="Xamarin.Forms">
-            <Version>3.4.0.1029999</Version>
-        </PackageReference>
-        <PackageReference Include="Syncfusion.Xamarin.SfDataForm">
-            <Version>16.4.0.52</Version>
-        </PackageReference>
-        <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
-            <Version>16.4.0.52</Version>
-        </PackageReference>
-        <PackageReference Include="Syncfusion.Xamarin.Buttons">
-            <Version>16.4.0.52</Version>
+            <Version>17.2.0.51</Version>
         </PackageReference>
         <PackageReference Include="Syncfusion.Xamarin.SfRotator">
-            <Version>16.4.0.52</Version>
+            <Version>17.4.0.47</Version>
         </PackageReference>
         <PackageReference Include="Plugin.CurrentActivity">
             <Version>2.1.0.4</Version>
@@ -86,13 +69,27 @@
         <PackageReference Include="Xam.Plugin.Media">
             <Version>4.0.1.5</Version>
         </PackageReference>
-        <PackageReference Include="Xamarin.Essentials">
-            <Version>0.9.1-preview</Version>
-        </PackageReference>
         <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-            <Version>16.4.0.52</Version>
+            <Version>17.2.0.51</Version>
         </PackageReference>
-        <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="16.4.0.52" />
+        <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="17.2.0.51" />
+        <PackageReference Include="Syncfusion.Xamarin.SfDataForm">
+          <Version>17.2.0.51</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Forms">
+          <Version>4.4.0.991640</Version>
+        </PackageReference>
+        <PackageReference Include="Xamarin.Android.Support.Interpolator">
+          <Version>28.0.0.3</Version>
+        </PackageReference>
+         <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
+        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
+        <PackageReference Include="Syncfusion.Xamarin.SfDataGrid">
+          <Version>17.2.0.51</Version>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
@@ -128,6 +125,7 @@
         <AndroidResource Include="Resources\drawable\LogoutIcon.png" />
         <AndroidResource Include="Resources\drawable-hdpi\AddIcon.png" />
         <AndroidResource Include="Resources\drawable-hdpi\CameraIcon.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\Logout.png" />
         <AndroidResource Include="Resources\drawable-hdpi\LogoutIcon.png" />
         <AndroidResource Include="Resources\drawable-xhdpi\AddIcon.png" />
         <AndroidResource Include="Resources\drawable-xhdpi\CameraIcon.png" />
