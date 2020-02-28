@@ -54,7 +54,8 @@ namespace CarCare
             {
                 await App.DataBaseService.SaveToDatabase(project);
                 await App.NavigationService.NavigateToBackPage(TimeLog);
-                await DependencyService.Get<IToastService>().ShowAlert("TimeLog added Successfully");
+                if (Device.RuntimePlatform != "UWP")
+                    await DependencyService.Get<IToastService>().ShowAlert("TimeLog added Successfully");
             }
             catch (NotNullConstraintViolationException exception)
             {

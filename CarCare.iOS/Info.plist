@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>CarCare</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.syncfusion.syncfusioncontrolsexplorer</string>
+	<string>com.syncfusion.carcare</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -45,7 +45,7 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<false/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>UIMainNibFile</key>

@@ -91,8 +91,8 @@ namespace CarCare
             {
                 await App.DataBaseService.SaveToDatabase(Project);
                 await App.NavigationService.NavigateToBackPage(Project);
-
-                await DependencyService.Get<IToastService>().ShowAlert("New booking has been placed");
+                if(Device.RuntimePlatform != "UWP")
+                    await DependencyService.Get<IToastService>().ShowAlert("New booking has been placed");
             }
             catch (NotNullConstraintViolationException exception)
             {

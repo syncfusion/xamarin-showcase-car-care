@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using CarCare.iOS;
@@ -13,7 +13,6 @@ using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.XForms.iOS.TextInputLayout;
 using UIKit;
 using Xamarin.Forms;
-using Syncfusion.XForms.iOS.Buttons;
 
 [assembly: Dependency(typeof(ToastiOS))]
 
@@ -43,7 +42,6 @@ namespace CarCare.iOS
 			SfRotatorRenderer.Init();
             SfComboBoxRenderer.Init();
             SfBusyIndicatorRenderer.Init();
-            SfButtonRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

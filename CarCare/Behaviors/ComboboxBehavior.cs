@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
+using SelectionChangedEventArgs = Syncfusion.XForms.ComboBox.SelectionChangedEventArgs;
 
 namespace CarCare
 {

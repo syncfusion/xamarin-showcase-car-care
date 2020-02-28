@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.LoginPage" xmlns:local="clr-namespace:CarCare" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" NavigationPage.HasNavigationBar="false" ios:Page.UseSafeArea="true" xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarCare.LoginPage" xmlns:local="clr-namespace:CarCare" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" NavigationPage.HasNavigationBar="false" ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
@@ -17,18 +17,18 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.25*" />
                 <RowDefinition Height="0.15*" />
-                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.4*" />
                 <RowDefinition Height="0.2*" />
             </Grid.RowDefinitions>
-            <Image Grid.Row="1" Source="icon.png" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" HorizontalOptions="CenterAndExpand" />
+            <Image Grid.Row="1" Source="icon.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" />
             <StackLayout Grid.Row="2">
-                <inputLayout:SfTextInputLayout Hint="Username">
+                <inputLayout:SfTextInputLayout Hint="User name">
                     <Entry x:Name="UserName" Text="{Binding User.UserName,Mode=TwoWay}" />
                 </inputLayout:SfTextInputLayout>
                 <inputLayout:SfTextInputLayout Hint="Password" EnablePasswordVisibilityToggle="true">
                     <Entry Text="{Binding User.UserPassword,Mode=TwoWay}" IsPassword="true" Placeholder="Enter the Password" />
                 </inputLayout:SfTextInputLayout>
-                <sfButton:SfButton VerticalOptions="CenterAndExpand" HeightRequest="40" Text="LOGIN" FontSize="14" TextColor="White" BackgroundColor="{StaticResource BluishGreenColor}" CornerRadius="5" Command="{Binding LoginCommand}" CommandParameter="{Binding Source={x:Reference UserName},Path=Text}" />
+                <Button VerticalOptions="CenterAndExpand" HeightRequest="40" Text="LOGIN" FontSize="14" TextColor="White" BackgroundColor="{StaticResource BluishGreenColor}" CornerRadius="5" Command="{Binding LoginCommand}" CommandParameter="{Binding Source={x:Reference UserName},Path=Text}" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
